@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kanban Board</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<main>
+
+    <!-- Top Navigation -->
+    <nav>
+        <h1>Kanban Board</h1>
+        <button id="addTaskBtn">+ Add Task</button>
+    </nav>
+
+    <!-- Board -->
+    <section class="board">
+
+        <!-- TODO COLUMN -->
+        <div class="task-column" id="todo">
+            <div class="heading">
+                <span>To Do</span>
+                <span class="count">0</span>
+            </div>
+        </div>
+
+        <!-- IN PROGRESS COLUMN -->
+        <div class="task-column" id="progress">
+            <div class="heading">
+                <span>In Progress</span>
+                <span class="count">0</span>
+            </div>
+        </div>
+
+        <!-- DONE COLUMN -->
+        <div class="task-column" id="done">
+            <div class="heading">
+                <span>Done</span>
+                <span class="count">0</span>
+            </div>
+        </div>
+
+    </section>
+
+</main>
+
+
+<!-- Modal for creating tasks -->
+<div class="modal hidden" id="taskModal">
+
+    <div class="modal-content">
+
+        <h2>Create Task</h2>
+
+        <input type="text" id="taskTitle" placeholder="Task title">
+
+        <textarea id="taskDesc" placeholder="Task description"></textarea>
+
+        <label>Priority</label>
+        <select id="taskPriority">
+            <option value="low">Low</option>
+            <option value="medium">Medium</option>
+            <option value="high">High</option>
+        </select>
+
+        <label>Due Date</label>
+        <input type="date" id="taskDate">
+
+        <div class="modal-buttons">
+            <button id="createTask">Create</button>
+            <button id="closeModal">Cancel</button>
+        </div>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
